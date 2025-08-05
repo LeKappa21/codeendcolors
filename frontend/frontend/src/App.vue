@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import Navbar from './components/navbar.vue';
-import HomePage from './components/HomePage.vue';
+import HomePage from './pages/HomePage.vue';
+import Footer from './components/footer.vue'
 </script>
 
 <template>
   <Navbar />
   <HomePage />
+  <Footer />
 </template>
 
 <style scoped>

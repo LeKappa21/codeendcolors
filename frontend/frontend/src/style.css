@@ -81,3 +81,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } 
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #05203a !important; /* ancora più scuro al passaggio del mouse */
+  transform: translateY(-50%) scale(1.2);
+}

@@ -7,6 +7,9 @@ import 'bootstrap'
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import router from './routes';
 
+
+//App.use(router)
 
 createApp(App).mount('#app')
