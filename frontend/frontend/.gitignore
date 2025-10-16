@@ -21,4 +21,14 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw?*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+
+
+
+# Images folder
+images/

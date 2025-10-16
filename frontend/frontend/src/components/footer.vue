@@ -4,7 +4,7 @@
         
         <div class="footer-brand mb-3 mb-md-0">
           <span class="fw-bold">
-            CODE <span class="text-end-footer">END</span>
+            CODE <span class="text-end-footer">AND </span>
             <span class="text-colors-footer">COLORS</span>
           </span>
         </div>
