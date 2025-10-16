@@ -9,7 +9,7 @@
     class="mySwiper"
   >
     <swiper-slide v-for="(slide, index) in slides" :key="index">
-      <div class="slide-wrapper position-relative">
+      <div class="slide-wrapper">
         <img :src="slide.image" :alt="'Slide ' + (index + 1)" />
         <div class="slide-text-overlay">
           <h1 class="site-title">
@@ -24,111 +24,86 @@
       </div>
     </swiper-slide>
   </swiper>
-  <!-- <section class="hero-section py-5">
-  <div class="container">
+
+  <!-- RETROPIE SECTION -->
+  <section class="retropie-section container my-5">
     <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h1 class="hero-title mb-3">
-          <span class="text-code">CODE</span>
-          <span class="text-end">END</span>
-          <span class="text-colors">COLORS</span>
-        </h1>
-        <p class="lead text-light">
-          Costruiamo cabinati arcade su misura, fondendo artigianato e innovazione per offrirti esperienze di gioco indimenticabili.
-        </p>
-        <button class="btn btn-warning btn-lg mt-4 shadow">Scopri i nostri modelli</button>
-      </div>
-      <div class="col-lg-6 text-center">
+      <div class="col-md-6 text-center">
         <img
-          src="https://ropie.it/wp-content/uploads/2019/05/RetroPie_Joystick.png"
+          src="https://www.retropie.it/wp-content/uploads/2019/05/RetroPie_Joystick.png"
           alt="Cabinato Arcade"
-          class="img-fluid rounded shadow-lg"
+          class="img-fluid rounded shadow-sm small-image"
         />
       </div>
-    </div>
-  </div>
-</section> -->
-
-
-<section class="retropie-section container my-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
-      <img
-        src="https://www.retropie.it/wp-content/uploads/2019/05/RetroPie_Joystick.png"
-        alt="Cabinato Arcade"
-        class="img-fluid rounded shadow-sm small-image"
-      />
-    </div>
-    <div class="col-md-6">
-      <h3 class="retropie-title mb-3">Sistema RetroPie preinstallato</h3>
-      <p class="retropie-description">
-        Ogni nostro cabinato include <strong>RetroPie</strong>, un sistema di emulazione completo e personalizzabile che ti consente di rivivere le emozioni del passato.  
-        Puoi giocare con <strong>centinaia di titoli classici</strong> per console come:
-      </p>
-      <ul>
-        <li>NES, SNES</li>
-        <li>Sega Mega Drive, Master System</li>
-        <li>Game Boy, Game Boy Advance</li>
-        <li>PlayStation 1</li>
-        <li>PSP (PlayStation Portable)</li>
-        <li>Arcade MAME</li>
-      </ul>
-      <p>
-        Ideale per lunghi periodi di <strong>divertimento in famiglia o con amici</strong>, con salvataggi, configurazioni personalizzate e una vera esperienza da sala giochi!
-      </p>
-      <button class="btn btn-warning mt-3">Scopri di più</button>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="services-section py-5 text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-          <h4>🎨 Design Personalizzato</h4>
-          <p>Scegli ogni dettaglio estetico del tuo cabinato.</p>
-        </div>
+      <div class="col-md-6">
+        <h3 class="retropie-title mb-3">Sistema RetroPie preinstallato</h3>
+        <p class="retropie-description">
+          Ogni nostro cabinato include <strong>RetroPie</strong>, un sistema di emulazione completo e personalizzabile che ti consente di rivivere le emozioni del passato.  
+          Puoi giocare con <strong>centinaia di titoli classici</strong> per console come:
+        </p>
+        <ul>
+          <li>NES, SNES</li>
+          <li>Sega Mega Drive, Master System</li>
+          <li>Game Boy, Game Boy Advance</li>
+          <li>PlayStation 1</li>
+          <li>PSP (PlayStation Portable)</li>
+          <li>Arcade MAME</li>
+        </ul>
+        <p>
+          Ideale per lunghi periodi di <strong>divertimento in famiglia o con amici</strong>, con salvataggi, configurazioni personalizzate e una vera esperienza da sala giochi!
+        </p>
+        <button class="btn btn-warning mt-3">Scopri di più</button>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-          <h4>💻 Hardware Moderno</h4>
-          <p>Componenti potenti, affidabili e aggiornabili.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
+            <h4>🎨 Design Personalizzato</h4>
+            <p>Scegli ogni dettaglio estetico del tuo cabinato.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-          <h4>🕹️ Supporto Software</h4>
-          <p>Configurazione completa con i migliori emulatori.</p>
+        <div class="col-md-4 mb-4">
+          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
+            <h4>💻 Hardware Moderno</h4>
+            <p>Componenti potenti, affidabili e aggiornabili.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
+            <h4>🕹️ Supporto Software</h4>
+            <p>Configurazione completa con i migliori emulatori.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-section text-center py-5">
-  <div class="container">
-    <h2 class="text-white">Costruisci ora il tuo cabinato arcade personalizzato!</h2>
-    <p class="text-light">Richiedi un preventivo gratuito o vieni a trovarci nel nostro laboratorio.</p>
-    <button class="btn btn-outline-light btn-lg mt-3">Contattaci</button>
-  </div>
-</section>
-
+  <!-- CTA SECTION -->
+  <section class="cta-section text-center py-5">
+    <div class="container">
+      <h2 class="text-white">Costruisci ora il tuo cabinato arcade personalizzato!</h2>
+      <p class="text-light">Richiedi un preventivo gratuito o vieni a trovarci nel nostro laboratorio.</p>
+      <button class="btn btn-outline-light btn-lg mt-3">Contattaci</button>
+    </div>
+  </section>
 </template>
-
 
 <script setup lang="ts">
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
+import 'swiper/css/effect-fade'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination, Navigation, Autoplay } from 'swiper/modules'
+import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper/modules'
 
-const modules = [Pagination, Navigation, Autoplay]
+const modules = [Pagination, Navigation, Autoplay, EffectFade]
 
 const slides = [
   {
@@ -150,219 +125,86 @@ const slides = [
 </script>
 
 <style scoped>
-
-
-
+/* SLIDER */
 .mySwiper {
   width: 100%;
-  height: 700px;
-  position: relative;
+  height: 100vh;
 }
 
 .slide-wrapper {
   position: relative;
-  width: 90%;
-  height: 90%;
-  margin-top: 20px; 
-  margin-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slide-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-}
-.slide-text-overlay {
-  position: absolute;
-  bottom: 0%; /* o top: 10% se preferisci */
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  color: white;
-  padding: 20px 40px;
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  transition: transform 1.5s ease;
 }
 
-.site-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.slide-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.slide-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  background: rgba(0,0,0,0.45);
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.slide-text-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .slide-text-overlay h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .slide-text-overlay p {
-  font-size: 1rem;
-}
-
-.text-code {
-  color: #d42626;
-}
-
-.text-end {
-  color: #ececec;
-}
-
-.text-colors {
-  color: #fded0b;
-}
-.hero-title span {
-  font-size: 3rem;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.text-code {
-  color: #d42626;
-}
-.text-end {
-  color: #ffffff;
-}
-.text-colors {
-  color: #fded0b;
-}
-
-.lead {
   font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.hero-image img {
-  max-width: 400px;
-}
-
-.services h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.cta h2 {
-  font-size: 2rem;
-}
-
-
-
-
-/* ihi */
-
-/* HERO SECTION */
-.hero-section {
-  background: linear-gradient(135deg, #81a8eb, #83f589);
-  color: white;
-  border-bottom: 5px solid #ffc107;
-}
-
-.hero-title span {
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.text-code {
-  color: #ff5252;
-}
-
-.text-end {
-  color: #ffffff;
-}
-
-.text-colors {
-  color: #ffeb3b;
-}
-
-/* SERVICES SECTION */
-.services-section {
-  background-color: #f4f4f4;
-}
-
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.service-card h4 {
-  color: #1e3c72;
-  font-weight: 600;
-}
-
-.service-card p {
-  color: #333;
-}
-
-/* CTA SECTION */
-.cta-section {
-  background: #1e3c72;
-  padding: 60px 20px;
-  border-top: 5px solid #ffc107;
-}
-
-.cta-section h2 {
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.cta-section p {
-  font-size: 1.1rem;
-  margin-top: 10px;
   margin-bottom: 20px;
-  color: #ddd;
 }
 
-/* BUTTON STYLES */
-button.btn-warning {
-  background-color: #ffc107;
-  border: none;
-  color: #000;
-}
+/* COLORS */
+.text-code { color: #d42626; }
+.text-end { color: #ececec; }
+.text-colors { color: #fded0b; }
 
-button.btn-warning:hover {
-  background-color: #e0a800;
-}
-
-button.btn-outline-light:hover {
-  background-color: #ffffff;
-  color: #1e3c72;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-title span {
-    font-size: 2rem;
-  }
-
-  .cta-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .cta-section p {
-    font-size: 1rem;
-  }
-}
-
+/* RETROPIE */
 .retropie-section {
   background-color: #f8f9fa;
-  padding: 40px 20px;
+  padding: 60px 20px;
   border-top: 4px solid #ffc107;
   border-bottom: 4px solid #ffc107;
+  border-radius: 12px;
+}
+
+.retropie-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
 }
 
 .retropie-title {
   color: #1e3c72;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .retropie-description {
@@ -370,10 +212,101 @@ button.btn-outline-light:hover {
   font-size: 1.1rem;
 }
 
-.small-image {
-  max-width: 300px;
-  height: auto;
+.retropie-section ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
+.retropie-section button {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
 
+.retropie-section button:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+/* SERVICES */
+.services-section {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.service-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #1e3c72;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #1e3c72, #3f51b5);
+  padding: 80px 20px;
+  border-top: 5px solid #ffc107;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.cta-section button {
+  font-size: 1.1rem;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta-section button:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .slide-text-overlay h1 { font-size: 1.8rem; }
+  .slide-text-overlay h2 { font-size: 1.2rem; }
+  .slide-text-overlay p { font-size: 0.95rem; }
+
+  .cta-section h2 { font-size: 1.6rem; }
+  .cta-section p { font-size: 1rem; }
+
+  .service-card { margin-bottom: 20px; }
+}
 </style>
