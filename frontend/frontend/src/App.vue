@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import Navbar from './components/navbar.vue';
-import HomePage from './pages/HomePage.vue';
-import Contatti from './pages/Contatti.vue';
 import Footer from './components/footer.vue'
 </script>
 

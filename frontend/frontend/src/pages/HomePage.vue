@@ -119,10 +119,15 @@
 </template>
 
 <script setup lang="ts">
+// @ts-ignore
 import 'swiper/css'
+// @ts-ignore
 import 'swiper/css/pagination'
+// @ts-ignore
 import 'swiper/css/navigation'
+// @ts-ignore
 import 'swiper/css/autoplay'
+// @ts-ignore
 import 'swiper/css/effect-fade'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -160,9 +165,10 @@ const slides = [
 /* SLIDER */
 .mySwiper {
   width: 100%;
-  height: 75vh;
-  max-height: 800px;
-  min-height: 500px;
+  height: 80vh;
+  max-height: 900px;
+  min-height: 600px;
+  position: relative;
 }
 
 .slide-wrapper {
@@ -176,11 +182,13 @@ const slides = [
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 2s ease;
+  transition: transform 3s ease;
+  filter: brightness(0.85);
 }
 
 .slide-wrapper:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  filter: brightness(0.75);
 }
 
 .slide-text-overlay {
@@ -188,16 +196,22 @@ const slides = [
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  max-width: 850px;
-  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(30,60,114,0.01) 100%);
-  padding: 50px 45px;
-  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(30, 60, 114, 0.7) 100%);
+  padding: 60px 50px;
+  border-radius: 25px;
   text-align: center;
   color: #fff;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 193, 7, 0.3);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border: 3px solid rgba(255, 193, 7, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.slide-text-overlay:hover {
+  border-color: rgba(255, 193, 7, 0.6);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
 }
 
 .site-title {
@@ -268,6 +282,17 @@ const slides = [
   overflow: hidden;
 }
 
+.retropie-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.retropie-section .row {
+  justify-content: center;
+  align-items: center;
+}
+
 .retropie-section::before {
   content: '';
   position: absolute;
@@ -289,6 +314,7 @@ const slides = [
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .image-glow {
@@ -350,7 +376,8 @@ const slides = [
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
-  margin: 30px 0;
+  margin: 30px auto;
+  max-width: 600px;
 }
 
 .console-item {
@@ -412,7 +439,16 @@ const slides = [
 .services-section {
   padding: 120px 0;
   background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
-  padding-left: 15%;
+}
+
+.services-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.services-section .row {
+  justify-content: center;
 }
 
 .section-subtitle {
@@ -511,12 +547,24 @@ const slides = [
   to { transform: rotate(360deg); }
 }
 
+.cta-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .cta-content {
   position: relative;
   z-index: 1;
   text-align: center;
   color: #fff;
-  padding-left: 25%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-title {
@@ -657,17 +705,16 @@ const slides = [
 
 @media (max-width: 768px) {
   .mySwiper {
-    height: 60vh;
-    min-height: 450px;
+    height: 70vh;
+    min-height: 500px;
   }
 
   .slide-text-overlay {
-    width: 90%;
-    padding: 35px 25px;
-  
-  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(30,60,114,0.3) 30%);
-}
-
+    width: 92%;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(30, 60, 114, 0.75) 100%);
+    border-width: 2px;
+  }
 
   .site-title {
     margin-bottom: 20px;

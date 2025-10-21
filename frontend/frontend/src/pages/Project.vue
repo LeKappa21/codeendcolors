@@ -1,7 +1,18 @@
 <template>
+  <section class="projects-page">
+    <!-- HERO -->
+    <div class="hero text-center py-5 text-white">
+      <div class="container">
+        <h1 class="fw-bold mb-3">I Nostri Progetti</h1>
+        <p class="lead text-light">
+          Scopri i nostri cabinati arcade personalizzati, realizzati con passione e attenzione ai dettagli.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
     <section class="projects py-5">
       <div class="container">
-        <h1 class="text-center mb-5">I Nostri Progetti</h1>
         <div class="row">
           <div class="col-md-4 mb-4" v-for="(project, index) in projects" :key="index">
             <div class="card h-100 shadow-sm">
@@ -16,7 +27,8 @@
         </div>
       </div>
     </section>
-  </template>
+  </section>
+</template>
   
   <script setup lang="ts">
   const projects = [
@@ -37,24 +49,76 @@
     }
   ]
   </script>
-  
-  <style scoped>
-  .projects {
-    background-color: #f8f9fa;
+
+<style scoped>
+/* --- HERO --- */
+.hero {
+  background: linear-gradient(135deg, #1e3c72, #3f51b5);
+  border-bottom: 4px solid #ffc107;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* --- PROJECTS SECTION --- */
+.projects {
+  background-color: #f8f9fa;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #ffc107;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #1e3c72;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2a5298 0%, #3f6eb8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
   }
-  
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
+
+  .hero p {
+    font-size: 1rem;
   }
-  
-  .card-title {
-    font-weight: bold;
-  }
-  
-  .card-text {
-    font-size: 0.95rem;
-    color: #555;
-  }
-  </style>
+}
+</style>
   
