@@ -5,7 +5,7 @@
     :space-between="50"
     :slides-per-view="1"
     :navigation="true"
-    :autoplay="{ delay: 3000, disableOnInteraction: false }"
+    :autoplay="{ delay: 5000, disableOnInteraction: false }"
     class="mySwiper"
   >
     <swiper-slide v-for="(slide, index) in slides" :key="index">
@@ -26,57 +26,76 @@
   </swiper>
 
   <!-- RETROPIE SECTION -->
-  <section class="retropie-section container my-5">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center">
-        <img
-          src="https://www.retropie.it/wp-content/uploads/2019/05/RetroPie_Joystick.png"
-          alt="Cabinato Arcade"
-          class="img-fluid rounded shadow-sm small-image"
-        />
-      </div>
-      <div class="col-md-6">
-        <h3 class="retropie-title mb-3">Sistema RetroPie preinstallato</h3>
-        <p class="retropie-description">
-          Ogni nostro cabinato include <strong>RetroPie</strong>, un sistema di emulazione completo e personalizzabile che ti consente di rivivere le emozioni del passato.  
-          Puoi giocare con <strong>centinaia di titoli classici</strong> per console come:
-        </p>
-        <ul>
-          <li>NES, SNES</li>
-          <li>Sega Mega Drive, Master System</li>
-          <li>Game Boy, Game Boy Advance</li>
-          <li>PlayStation 1</li>
-          <li>PSP (PlayStation Portable)</li>
-          <li>Arcade MAME</li>
-        </ul>
-        <p>
-          Ideale per lunghi periodi di <strong>divertimento in famiglia o con amici</strong>, con salvataggi, configurazioni personalizzate e una vera esperienza da sala giochi!
-        </p>
-        <button class="btn btn-warning mt-3">Scopri di più</button>
+  <section class="retropie-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="image-container" data-aos="fade-right">
+            <div class="image-glow"></div>
+            <img
+              src="https://www.retropie.it/wp-content/uploads/2019/05/RetroPie_Joystick.png"
+              alt="Cabinato Arcade"
+              class="retropie-image"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="badge-pill">Sistema Completo</div>
+          <h2 class="section-title">Sistema RetroPie preinstallato</h2>
+          <p class="section-description">
+            Ogni nostro cabinato include <strong>RetroPie</strong>, un sistema di emulazione completo e personalizzabile che ti consente di rivivere le emozioni del passato.  
+            Puoi giocare con <strong>centinaia di titoli classici</strong> per console come:
+          </p>
+          <div class="console-grid">
+            <div class="console-item">🎮 NES, SNES</div>
+            <div class="console-item">🎯 Sega Mega Drive</div>
+            <div class="console-item">📱 Game Boy, GBA</div>
+            <div class="console-item">🎪 PlayStation 1</div>
+            <div class="console-item">🎰 PSP</div>
+            <div class="console-item">🕹️ Arcade MAME</div>
+          </div>
+          <p class="highlight-text">
+            Ideale per lunghe sessioni di <strong>divertimento in famiglia o con amici</strong>, con salvataggi, configurazioni personalizzate e una vera esperienza da sala giochi!
+          </p>
+          <button class="modern-button">
+            Scopri di più
+            <span class="button-icon">→</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SERVICES SECTION -->
-  <section class="services-section py-5 text-center">
+  <section class="services-section">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-            <h4>🎨 Design Personalizzato</h4>
-            <p>Scegli ogni dettaglio estetico del tuo cabinato.</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Perché scegliere i nostri cabinati</h2>
+        <p class="section-subtitle">Qualità, personalizzazione e passione in ogni dettaglio</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3 class="service-title">Design Personalizzato</h3>
+            <p class="service-description">Scegli ogni dettaglio estetico del tuo cabinato, dai colori alle grafiche personalizzate.</p>
+            <div class="service-hover-effect"></div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-            <h4>💻 Hardware Moderno</h4>
-            <p>Componenti potenti, affidabili e aggiornabili.</p>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3 class="service-title">Hardware Moderno</h3>
+            <p class="service-description">Componenti potenti, affidabili e aggiornabili per prestazioni ottimali.</p>
+            <div class="service-hover-effect"></div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-card p-4 shadow-sm rounded bg-white h-100">
-            <h4>🕹️ Supporto Software</h4>
-            <p>Configurazione completa con i migliori emulatori.</p>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card">
+            <div class="service-icon">🕹️</div>
+            <h3 class="service-title">Supporto Software</h3>
+            <p class="service-description">Configurazione completa con i migliori emulatori e assistenza dedicata.</p>
+            <div class="service-hover-effect"></div>
           </div>
         </div>
       </div>
@@ -84,11 +103,17 @@
   </section>
 
   <!-- CTA SECTION -->
-  <section class="cta-section text-center py-5">
+  <section class="cta-section">
+    <div class="cta-background"></div>
     <div class="container">
-      <h2 class="text-white">Costruisci ora il tuo cabinato arcade personalizzato!</h2>
-      <p class="text-light">Richiedi un preventivo gratuito o vieni a trovarci nel nostro laboratorio.</p>
-      <button class="btn btn-outline-light btn-lg mt-3">Contattaci</button>
+      <div class="cta-content" data-aos="zoom-in">
+        <h2 class="cta-title">Costruisci il tuo cabinato arcade dei sogni</h2>
+        <p class="cta-description">Richiedi un preventivo gratuito o vieni a trovarci nel nostro laboratorio</p>
+        <button class="cta-button-large">
+          Contattaci ora
+          <span class="pulse-dot"></span>
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -109,7 +134,7 @@ const slides = [
   {
     image: 'images/20250622_155407.jpg',
     title: 'Il Fascino del Retro',
-    description: 'Un design ispirato ai classici degli anni ‘80, ma con hardware moderno.'
+    description: 'Un design ispirato ai classici degli anni 80, ma con hardware moderno.'
   },
   {
     image: 'images/IMG-20250421-WA0013.jpg',
@@ -125,10 +150,19 @@ const slides = [
 </script>
 
 <style scoped>
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* SLIDER */
 .mySwiper {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  max-height: 800px;
+  min-height: 500px;
 }
 
 .slide-wrapper {
@@ -142,11 +176,11 @@ const slides = [
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.5s ease;
+  transition: transform 2s ease;
 }
 
 .slide-wrapper:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .slide-text-overlay {
@@ -154,159 +188,516 @@ const slides = [
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 800px;
-  background: rgba(0,0,0,0.45);
-  padding: 30px 40px;
-  border-radius: 12px;
+  width: 85%;
+  max-width: 850px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(30,60,114,0.01) 100%);
+  padding: 50px 45px;
+  border-radius: 20px;
   text-align: center;
   color: #fff;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
 }
 
-.slide-text-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.site-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.text-code {
+  color: #ff3b3b;
+  text-shadow: 0 0 25px rgba(255, 59, 59, 0.7), 0 0 50px rgba(255, 59, 59, 0.4);
+}
+
+.text-end {
+  color: #ffffff;
+  font-weight: 400;
+  font-style: italic;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.text-colors {
+  color: #fded0b;
+  text-shadow: 0 0 25px rgba(253, 237, 11, 0.7), 0 0 50px rgba(253, 237, 11, 0.4);
 }
 
 .slide-text-overlay h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
 }
 
 .slide-text-overlay p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 30px;
+  line-height: 1.7;
+  color: #f0f0f0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.slide-text-overlay .btn {
+  padding: 15px 40px;
   font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/* COLORS */
-.text-code { color: #d42626; }
-.text-end { color: #ececec; }
-.text-colors { color: #fded0b; }
-
-/* RETROPIE */
-.retropie-section {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
-  border-top: 4px solid #ffc107;
-  border-bottom: 4px solid #ffc107;
-  border-radius: 12px;
-}
-
-.retropie-section img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  margin-bottom: 20px;
-}
-
-.retropie-title {
-  color: #1e3c72;
   font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.retropie-description {
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.retropie-section ul li {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 5px;
-}
-
-.retropie-section button {
-  background-color: #ffc107;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
   border: none;
   color: #000;
-  font-weight: 600;
-  padding: 10px 25px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.slide-text-overlay .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 193, 7, 0.7);
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+/* RETROPIE SECTION */
+.retropie-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.retropie-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.05) 0%, transparent 70%);
+  animation: pulse 15s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-glow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.3) 0%, transparent 70%);
+  filter: blur(40px);
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { transform: scale(0.9); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.retropie-image {
+  max-width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+  transition: transform 0.5s ease;
+}
+
+.retropie-image:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.badge-pill {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #000;
   border-radius: 50px;
-  transition: all 0.3s ease;
-}
-
-.retropie-section button:hover {
-  background-color: #e0a800;
-  color: #fff;
-}
-
-/* SERVICES */
-.services-section {
-  background-color: #f4f4f4;
-  padding: 60px 20px;
-}
-
-.service-card {
-  background-color: #fff;
-  padding: 30px 20px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-.service-card h4 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: #1e3c72;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* CTA */
-.cta-section {
-  background: linear-gradient(135deg, #1e3c72, #3f51b5);
-  padding: 80px 20px;
-  border-top: 5px solid #ffc107;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.cta-section h2 {
-  font-size: 2.2rem;
   font-weight: 700;
-  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
-.cta-section p {
-  font-size: 1.2rem;
-  color: #ddd;
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
   margin-bottom: 30px;
 }
 
-.cta-section button {
-  font-size: 1.1rem;
-  padding: 15px 40px;
-  border-radius: 50px;
-  font-weight: 700;
+.console-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.console-item {
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
 }
 
-.cta-section button:hover {
-  background-color: #ffc107;
+.console-item:hover {
+  border-color: #ffc107;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+}
+
+.highlight-text {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.modern-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(30, 60, 114, 0.3);
+}
+
+.modern-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(30, 60, 114, 0.4);
+  background: linear-gradient(135deg, #2a5298 0%, #3f6eb8 100%);
+}
+
+.button-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.modern-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+/* SERVICES SECTION */
+.services-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  padding-left: 15%;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.service-card {
+  position: relative;
+  padding: 50px 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  overflow: hidden;
+  height: 100%;
+}
+
+.service-hover-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(30, 60, 114, 0.1) 100%);
+  transition: left 0.5s;
+  z-index: 0;
+}
+
+.service-card:hover .service-hover-effect {
+  left: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  border-color: #ffc107;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-description {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA SECTION */
+.cta-section {
+  position: relative;
+  padding: 150px 0;
+  overflow: hidden;
+}
+
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3f6eb8 100%);
+  z-index: 0;
+}
+
+.cta-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding-left: 25%;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-description {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-button-large {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 55px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
   color: #000;
+  border: none;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.5);
+  overflow: hidden;
+}
+
+.cta-button-large::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.cta-button-large:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.cta-button-large:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.7);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+/* SWIPER CUSTOMIZATION */
+:deep(.swiper-button-next),
+:deep(.swiper-button-prev) {
+  color: #ffc107;
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+:deep(.swiper-button-next):hover,
+:deep(.swiper-button-prev):hover {
+  background: rgba(255, 193, 7, 0.9);
+  color: #000;
+  transform: scale(1.1);
+}
+
+:deep(.swiper-button-next)::after,
+:deep(.swiper-button-prev)::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+:deep(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+:deep(.swiper-pagination-bullet-active) {
+  background: #ffc107;
+  width: 35px;
+  border-radius: 6px;
 }
 
 /* RESPONSIVE */
+@media (max-width: 992px) {
+  .mySwiper {
+    height: 65vh;
+  }
+
+  .retropie-section {
+    padding: 80px 0;
+  }
+
+  .services-section {
+    padding: 80px 0;
+  }
+
+  .cta-section {
+    padding: 100px 0;
+  }
+
+  .console-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .slide-text-overlay h1 { font-size: 1.8rem; }
-  .slide-text-overlay h2 { font-size: 1.2rem; }
-  .slide-text-overlay p { font-size: 0.95rem; }
+  .mySwiper {
+    height: 60vh;
+    min-height: 450px;
+  }
 
-  .cta-section h2 { font-size: 1.6rem; }
-  .cta-section p { font-size: 1rem; }
+  .slide-text-overlay {
+    width: 90%;
+    padding: 35px 25px;
+  
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(30,60,114,0.3) 30%);
+}
 
-  .service-card { margin-bottom: 20px; }
+
+  .site-title {
+    margin-bottom: 20px;
+  }
+
+  .slide-text-overlay h2 {
+    margin-bottom: 15px;
+  }
+
+  .slide-text-overlay p {
+    margin-bottom: 25px;
+  }
+
+  .console-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .retropie-image {
+    max-width: 90%;
+  }
+
+  :deep(.swiper-button-next),
+  :deep(.swiper-button-prev) {
+    width: 40px;
+    height: 40px;
+  }
+
+  :deep(.swiper-button-next)::after,
+  :deep(.swiper-button-prev)::after {
+    font-size: 16px;
+  }
 }
 </style>
