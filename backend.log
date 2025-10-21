@@ -1,0 +1,30 @@
+❌ Errore: ConnectionError [SequelizeConnectionError]: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string
+    at Client._connectionCallback (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:149:20)
+    at Client._handleErrorWhileConnecting (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/client.js:336:19)
+    at Client._handleErrorEvent (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/client.js:346:19)
+    at Connection.emit (node:events:518:28)
+    at Client._handleAuthSASLContinue (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/client.js:284:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  parent: Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string
+      at Object.continueSession (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/crypto/sasl.js:36:11)
+      at Client._handleAuthSASLContinue (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/client.js:276:18)
+      at Connection.emit (node:events:518:28)
+      at /home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/connection.js:116:12
+      at Parser.parse (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg-protocol/dist/parser.js:36:17)
+      at Socket.<anonymous> (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg-protocol/dist/index.js:11:42)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5),
+  original: Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string
+      at Object.continueSession (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/crypto/sasl.js:36:11)
+      at Client._handleAuthSASLContinue (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/client.js:276:18)
+      at Connection.emit (node:events:518:28)
+      at /home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg/lib/connection.js:116:12
+      at Parser.parse (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg-protocol/dist/parser.js:36:17)
+      at Socket.<anonymous> (/home/kevin/Scrivania/miei-progetti/codeendcolors/node_modules/pg-protocol/dist/index.js:11:42)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+}

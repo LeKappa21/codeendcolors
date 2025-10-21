@@ -28,15 +28,31 @@
                 <p class="form-subtitle">Compila il modulo qui sotto e ti ricontatteremo entro 24 ore</p>
               </div>
 
-              <form class="contact-form">
+              <!-- Messaggio di successo (visibile solo dopo l'invio) -->
+              <div v-if="formSubmitted" class="success-container">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">Messaggio Inviato con Successo!</h3>
+                <p class="success-text">{{ successMessage }}</p>
+                <p class="redirect-info">Verrai reindirizzato alla home tra <strong>{{ countdown }}</strong> secondi...</p>
+              </div>
+
+              <!-- Form (nascosto dopo l'invio con successo) -->
+              <form v-else class="contact-form" @submit.prevent="handleSubmit">
+                <!-- Messaggio di errore -->
+                <div v-if="errorMessage" class="alert alert-error">
+                  {{ errorMessage }}
+                </div>
+
                 <div class="form-group">
                   <label for="name" class="form-label-custom">Nome completo</label>
                   <input
                     type="text"
                     id="name"
+                    v-model="formData.name"
                     class="form-input-custom"
                     placeholder="Es. Mario Rossi"
                     required
+                    :disabled="isSubmitting"
                   />
                 </div>
 
@@ -45,9 +61,11 @@
                   <input
                     type="email"
                     id="email"
+                    v-model="formData.email"
                     class="form-input-custom"
                     placeholder="mario.rossi@example.com"
                     required
+                    :disabled="isSubmitting"
                   />
                 </div>
 
@@ -55,16 +73,19 @@
                   <label for="message" class="form-label-custom">Messaggio</label>
                   <textarea
                     id="message"
+                    v-model="formData.message"
                     class="form-input-custom textarea-custom"
                     rows="8"
                     placeholder="Scrivi qui il tuo messaggio..."
                     required
+                    :disabled="isSubmitting"
                   ></textarea>
                 </div>
 
-                <button type="submit" class="submit-button">
-                  Invia messaggio
-                  <span class="button-arrow">→</span>
+                <button type="submit" class="submit-button" :disabled="isSubmitting">
+                  <span v-if="!isSubmitting">Invia messaggio</span>
+                  <span v-else>Invio in corso...</span>
+                  <span class="button-arrow" v-if="!isSubmitting">→</span>
                 </button>
               </form>
             </div>
@@ -105,7 +126,79 @@
 </template>
 
 <script setup lang="ts">
-// puoi aggiungere gestione del form se vuoi
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+// API endpoint
+const API_URL = 'http://localhost:3001/api/contact'
+
+// Stato del form
+const formData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const isSubmitting = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
+const formSubmitted = ref(false)
+const countdown = ref(4)
+
+// Funzione per avviare il countdown e reindirizzare
+const startCountdown = () => {
+  const interval = setInterval(() => {
+    countdown.value--
+    if (countdown.value <= 0) {
+      clearInterval(interval)
+      router.push('/') // Redirect alla home
+    }
+  }, 1000) // Ogni secondo
+}
+
+// Funzione per gestire l'invio del form
+const handleSubmit = async () => {
+  // Reset messaggi
+  successMessage.value = ''
+  errorMessage.value = ''
+  isSubmitting.value = true
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData.value)
+    })
+
+    const data = await response.json()
+
+    if (response.ok && data.success) {
+      successMessage.value = data.message
+      formSubmitted.value = true // Nasconde il form e mostra il messaggio di successo
+
+      // Reset form
+      formData.value = {
+        name: '',
+        email: '',
+        message: ''
+      }
+
+      // Avvia il countdown e redirect
+      startCountdown()
+    } else {
+      errorMessage.value = data.error || 'Errore durante l\'invio del messaggio'
+    }
+  } catch (error) {
+    console.error('Errore:', error)
+    errorMessage.value = 'Errore di connessione. Verifica che il backend sia avviato.'
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
 
 <style scoped>
@@ -260,6 +353,100 @@
   font-size: 1.1rem;
   color: #666;
   margin-top: 20px;
+}
+
+/* SUCCESS CONTAINER */
+.success-container {
+  text-align: center;
+  padding: 80px 40px;
+  animation: fadeInScale 0.5s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-size: 4rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+  animation: checkPulse 1s ease infinite;
+}
+
+@keyframes checkPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.success-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.success-text {
+  font-size: 1.15rem;
+  color: #28a745;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.redirect-info {
+  font-size: 1.05rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.redirect-info strong {
+  color: #ffc107;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* ALERT STYLES */
+.alert {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-error {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  border: 2px solid #dc3545;
 }
 
 /* FORM STYLES */
