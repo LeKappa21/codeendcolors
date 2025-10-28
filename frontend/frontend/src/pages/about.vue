@@ -99,7 +99,7 @@ const team = [
     role: 'Full Stack Developer',
     description: 'Sviluppatore full stack appassionato di tecnologie moderne, specializzato in Vue.js, Node.js e architetture scalabili.',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: 'https://i.postimg.cc/W3GkGzQ2/profile-demo.jpg',
+    image: '/codeendcolors/images/IMG-20250322-WA0025.jpg',
     skills: ['Vue.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'UI/UX']
   },
   {
@@ -107,7 +107,7 @@ const team = [
     role: 'Falegnameria e Restaurazione',
     description: 'Esperta artigiana specializzata nella lavorazione del legno, costruzione di strutture per cabinati e restauro di pezzi vintage.',
     bio: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-    image: 'images/IMG-20250209-WA0010.jpg',
+    image: '/codeendcolors/images/IMG-20250309-WA0003.jpg',
     skills: ['Falegnameria', 'Restauro Legno', 'Carpenteria', 'Design Strutturale', 'Verniciatura']
   }
 ]
