@@ -107,7 +107,7 @@ const team = [
     role: 'Falegnameria e Restaurazione',
     description: 'Esperta artigiana specializzata nella lavorazione del legno, costruzione di strutture per cabinati e restauro di pezzi vintage.',
     bio: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-    image: '/images/IMG-20250209-WA0010.jpg',
+    image: 'images/IMG-20250209-WA0010.jpg',
     skills: ['Falegnameria', 'Restauro Legno', 'Carpenteria', 'Design Strutturale', 'Verniciatura']
   }
 ]
