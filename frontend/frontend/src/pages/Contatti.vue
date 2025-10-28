@@ -212,12 +212,13 @@ const handleSubmit = async () => {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  padding: 120px 0 80px;
+  padding: 4rem 0;
   overflow: hidden;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 .hero-section .container {

@@ -55,6 +55,8 @@
 .hero {
   background: linear-gradient(135deg, #1e3c72, #3f51b5);
   border-bottom: 4px solid #ffc107;
+  padding: 3rem 0;
+  margin-top: 0;
 }
 
 .hero h1 {
