@@ -45,12 +45,30 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 const navItems = [
   { label: 'Home', route: '/' },
   { label: 'Chi Siamo', route: '/about' },
   { label: 'Progetti', route: '/project' },
   { label: 'Contatti', route: '/contatti' }
 ];
+
+// Assicurati che Bootstrap sia caricato e il toggle funzioni
+onMounted(() => {
+  // Chiudi il menu quando si clicca su un link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse?.classList.contains('show')) {
+        new (window as any).bootstrap.Collapse(navbarCollapse, {
+          toggle: true
+        });
+      }
+    });
+  });
+});
 </script>
 
 <style scoped>
