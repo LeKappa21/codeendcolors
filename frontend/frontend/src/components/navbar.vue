@@ -16,18 +16,16 @@
       <button
         class="navbar-toggler"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation"
-        @click="handleToggle"
+        @click="toggleMenu"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Menu di navigazione -->
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" :class="{ show: isMenuOpen }" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" v-for="(item, i) in navItems" :key="i">
             <router-link
@@ -35,6 +33,7 @@
               :to="item.route"
               active-class="active"
               exact-active-class="active"
+              @click="closeMenu"
             >
               {{ item.label }}
             </router-link>
@@ -46,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const navItems = [
   { label: 'Home', route: '/' },
@@ -57,26 +56,13 @@ const navItems = [
 
 const isMenuOpen = ref(false);
 
-const handleToggle = () => {
+const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-// Assicurati che Bootstrap sia caricato e il toggle funzioni
-onMounted(() => {
-  // Chiudi il menu quando si clicca su un link
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const navbarCollapse = document.getElementById('navbarNav');
-      if (navbarCollapse?.classList.contains('show')) {
-        isMenuOpen.value = false;
-        new (window as any).bootstrap.Collapse(navbarCollapse, {
-          toggle: true
-        });
-      }
-    });
-  });
-});
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
 </script>
 
 <style scoped>
