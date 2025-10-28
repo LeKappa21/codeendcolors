@@ -19,8 +19,9 @@
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
-        aria-expanded="false"
+        :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation"
+        @click="handleToggle"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const navItems = [
   { label: 'Home', route: '/' },
@@ -53,6 +54,12 @@ const navItems = [
   { label: 'Progetti', route: '/project' },
   { label: 'Contatti', route: '/contatti' }
 ];
+
+const isMenuOpen = ref(false);
+
+const handleToggle = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 // Assicurati che Bootstrap sia caricato e il toggle funzioni
 onMounted(() => {
@@ -62,6 +69,7 @@ onMounted(() => {
     link.addEventListener('click', () => {
       const navbarCollapse = document.getElementById('navbarNav');
       if (navbarCollapse?.classList.contains('show')) {
+        isMenuOpen.value = false;
         new (window as any).bootstrap.Collapse(navbarCollapse, {
           toggle: true
         });

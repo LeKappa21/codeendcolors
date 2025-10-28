@@ -711,8 +711,6 @@ const slides = [
   .slide-text-overlay {
     width: 92%;
     padding: 40px 30px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(30, 60, 114, 0.75) 100%);
-    border-width: 2px;
   }
 
   .site-title {
