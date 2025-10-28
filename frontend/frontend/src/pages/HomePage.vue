@@ -5,6 +5,7 @@
     :space-between="50"
     :slides-per-view="1"
     :navigation="true"
+    :loop="true"
     :autoplay="{ delay: 5000, disableOnInteraction: false }"
     class="mySwiper"
   >
