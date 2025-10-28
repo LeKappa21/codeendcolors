@@ -199,21 +199,17 @@ const slides = [
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(30, 60, 114, 0.7) 100%);
+  background: transparent;
   padding: 60px 50px;
   border-radius: 25px;
   text-align: center;
   color: #fff;
-  backdrop-filter: blur(15px);
-  border: 3px solid rgba(255, 193, 7, 0.4);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
   transition: all 0.3s ease;
 }
 
-.slide-text-overlay:hover {
-  border-color: rgba(255, 193, 7, 0.6);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
-}
 
 .site-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -221,6 +217,7 @@ const slides = [
   margin-bottom: 25px;
   letter-spacing: 3px;
   line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .text-code {
@@ -244,15 +241,16 @@ const slides = [
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .slide-text-overlay p {
   font-size: clamp(1rem, 2vw, 1.25rem);
   margin-bottom: 30px;
   line-height: 1.7;
-  color: #f0f0f0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .slide-text-overlay .btn {
