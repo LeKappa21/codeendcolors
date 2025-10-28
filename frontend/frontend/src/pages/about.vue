@@ -161,9 +161,6 @@ const team = [
 .team-member-section {
   padding: 80px 0;
   position: relative;
-}
-
-.team-member-section:nth-child(even) {
   background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 }
 
